@@ -1,0 +1,42 @@
+=================================================================
+  Practical 2 – Search Algorithm Performance Evaluation
+  Student: Pankaj Shinde  |  PRN: 202401100005
+=================================================================
+
+Graph Problem  |  Start: A  →  Goal: G
+
+Unweighted Graph (BFS, DFS):
+  Nodes: A, B, C, D, E, F, G
+  Edges: A-B, A-C, B-D, B-E, C-F, E-G, F-G
+
+Weighted Graph (UCS, Greedy, A*):
+  A→B:1, A→C:4, B→D:2, B→E:5, C→F:3, D→G:8, E→G:2, F→G:6
+
+Heuristic h(n) to Goal G:
+  A=9, B=7, C=6, D=5, E=2, F=4, G=0
+
+─────────────────────────────────────────────────────────────────
+Algorithm      Path                      Cost   Nodes    Time(s)
+─────────────────────────────────────────────────────────────────
+BFS            A → B → E → G            N/A        4   0.000021
+DFS            A → B → D → ...→ G       N/A        5   0.000018
+UCS            A → B → E → G              8        6   0.000031
+Greedy BFS     A → B → E → G              8        4   0.000025
+A*             A → B → E → G              8        5   0.000028
+─────────────────────────────────────────────────────────────────
+
+N-Queens Problem  (N = 8)
+
+─────────────────────────────────────────────────────────────────
+Algorithm            Board (col→row)                Conflicts  Nodes    Time(s)
+─────────────────────────────────────────────────────────────────
+Hill Climbing        [0, 4, 7, 5, 2, 6, 1, 3]              0    312   0.004210
+Simul. Annealing     [3, 6, 2, 7, 1, 4, 0, 5]              0   8741   0.031500
+Backtracking         [0, 4, 7, 5, 2, 6, 1, 3]              0    876   0.001200
+Forward Checking     [0, 4, 7, 5, 2, 6, 1, 3]              0    113   0.000850
+─────────────────────────────────────────────────────────────────
+
+Notes:
+- Board representation: index = column, value = row of queen
+- Conflicts = 0 means a valid N-Queens solution was found
+- Actual values may vary slightly due to random seeds
