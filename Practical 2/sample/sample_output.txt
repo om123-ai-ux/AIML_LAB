@@ -1,6 +1,6 @@
 =================================================================
   Practical 2 – Search Algorithm Performance Evaluation
-  Student: Pankaj Shinde  |  PRN: 202401100005
+  Student: Om Deore  |  PRN: 202401100093
 =================================================================
 
 Graph Problem  |  Start: A  →  Goal: G
